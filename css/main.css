@@ -1,0 +1,432 @@
+/*
+  Theme Name: Name - Multipurpose HTML Template
+  Author: mdsalim400@gmail.com
+  Support: admin@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
+ body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	color: #313131;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #7e7e7e;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+/* button style */
+
+.btn {
+	-moz-user-select: none;
+	background: #1696e7 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 13px 25px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.breadcrumb > .active {
+	color: #888;
+}
+.owl-carousel .owl-nav div {
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+	height: 40px;
+	left: 20px;
+	line-height: 40px;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 40px;
+}
+.owl-carousel .owl-nav div.owl-next {
+	left: auto;
+	right: 20px;
+}
+.owl-carousel:hover .owl-nav div {
+	opacity: 1;
+	visibility: visible;
+}
+.owl-carousel .owl-nav div:hover {
+	background: #2B96CC;
+	color: #fff
+}
+
+/* scrollUp */
+#scrollUp {
+	background: #7DBA2F;
+	height: 35px;
+	width: 35px;
+	right: 50px;
+	bottom: 77px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 20px;
+	line-height: 34px;
+}
+#scrollUp:hover {
+	background: #444;
+}
+
+
+
+
+
+
+.container-wrapper {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../img/bakground.jpg");
+	
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.suscribe_wrapper {
+	
+}
+.singel-content h1 {
+	color: #fff;
+	font-weight: 800;
+	line-height: 80px;
+	letter-spacing: 6px;
+	font-size: 60px;
+	text-transform:uppercase;
+	border-top: 5px solid #fff;
+	border-bottom: 5px solid #fff;
+
+}
+.singel-content .arrow  i{
+	color: #fff;
+	font-size: 30px;
+	margin: 40px 0;
+	animation: anne 3s infinite ; 
+	
+}
+@keyframes anne{
+	0%{
+		transform: translateY(0);
+	}
+	20%{
+		transform: translateY(0px);
+	}
+	40%{
+		transform: translateY(-30px);
+	}
+	60%{
+		transform: translateY(0px);
+	}
+	80%{
+		transform: translateY(-5px);
+	}
+
+	100%{
+		transform: translateY(0px);
+	}
+}
+.singel-content a.btn {
+	display: inline-block;
+	padding: 15px 58px;
+	border-radius: 17px;
+	background-color: #fff;
+	color: #000;
+}
+.form-container{
+	position: absolute;
+	width: 800px;
+	height: 400px;
+	-webkit-box-shadow: 2px 2px 5px 5px rgba(240,228,240,1);
+	-moz-box-shadow: 2px 2px 5px 5px rgba(240,228,240,1);
+	box-shadow: 2px 2px 5px 5px rgba(240,228,240,1);
+	transform: translateX(6%);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s all ease-in-out;
+	-webkit-transition: 0.3s all ease-in-out;
+	-moz-transition: 0.3s all ease-in-out;
+	-ms-transition: 0.3s all ease-in-out;
+	-o-transition: 0.3s all ease-in-out;
+
+}
+.form-container from {
+    width: 39%;
+    display: inline-block;
+    top: 26%;
+    position: absolute;
+    left: 5%;
+}
+.input-form {
+	width: 300px;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 5px 6px;
+	letter-spacing: 2px;
+	font-weight: 600;
+	margin-top: 30px;
+	background: none;
+	border: none;
+	border-bottom: 4px solid #ddd;
+}
+.input-form:focus{
+	border-bottom: 4px solid #fff;
+}
+.input-form::placeholder{
+	color: #ddd;
+}
+.input-form:focus::placeholder{
+	color: #fff;
+}
+input[type="checkbox"] {
+	appearance: none;
+	-moz-appearance: none;
+	width: 30px;
+	height: 15px;
+	background-color: #fff;
+	outline: none;
+	outline: none;
+	box-shadow: inset 0 0 10px rgba(0,0,0,.4);
+	position: relative;
+}
+input:checked[type="checkbox"]{
+	background-color: red;
+}
+input[type="checkbox"]::before{
+	position: absolute;
+	content: "";
+	width: 10px;
+	height: 18px;
+	top: -1.32px;
+	left: 0;
+	background-color: blue;
+	transition:0.5s;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+	-ms-transition:0.5s;
+	-o-transition:0.5s;
+}
+p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    margin-top: 22px;
+    font-weight: 600;
+}
+input:checked[type="checkbox"]::before{
+	left: 23px;
+}
+.form-container label {
+    color: #fff;
+    padding: 0 13px;
+}
+.header {
+    width: 44%;
+    display: inline-block;
+    top: 40%;
+    position: absolute;
+    right: 5%;
+}
+
+.svjkcvxcklv
+.header h2 {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 3px;
+}
+.form-container from {
+    width: 48%;
+    display: inline-block;
+}
+.colose-btn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
